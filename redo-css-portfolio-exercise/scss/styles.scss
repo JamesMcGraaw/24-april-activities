@@ -1,0 +1,214 @@
+@import "colours.scss";
+@import "mixins.scss";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient($background-colour1, $background-colour2);
+    font-family: 'Special Elite', cursive;
+
+    header {
+        display: flex;
+        justify-content: space-evenly;
+
+        nav {
+            margin: 1.5rem 0.5rem 0.5rem;
+            padding: 0.5rem;
+            background-color: $link-colour-background;
+            color: $link-colour;
+            border-radius: 2px;
+            box-shadow: 0.25rem 0.25rem 0.75rem $shadow-colour;
+
+            a:link {
+                color: $link-colour;
+            }
+
+            a:visited {
+                color: $link-colour;
+            }
+
+            &:hover {
+                background-color: $nav-bar-hover;
+            }
+        }
+    }
+
+    hr {
+        margin: 1.5rem auto;
+        width: 85vw;
+        border: 0.1rem solid $hr-colour;
+        border-radius: 5px;
+    }
+
+    .container {
+        width: 100%;
+        margin: 1rem auto;
+        display: grid;
+        grid-template-columns:1fr;
+        justify-items: center;
+
+        #sub-title {
+            @include gridColumns(1, 2);
+            @include gridRows(2, 3);
+        }
+        #main-title {
+            font-size: 1.5rem;
+            @include gridColumns(1, 2);
+            @include gridRows(1, 2);
+        }
+        #main-image {
+            @include gridColumns(1, 2);
+            @include gridRows(3, 4);
+        }
+    }
+    main {
+        width: 90vw;
+        margin: 1rem auto;
+        background-color: $primary-colour;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        box-shadow: 0 0 0.15rem 0.15rem $primary-colour;
+    }
+
+    .titles {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    article {
+        padding: 1rem;
+        ul {
+            padding-left: 1rem;
+        }
+    }
+    #real-photo {
+        position: relative;
+        display: inline-block
+    }
+
+    #real-photo .img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    #real-photo:hover .img-top {
+        display: inline;
+    }
+
+    footer {
+        width: 90vw;
+        margin: 0 auto 1rem;
+        background-color: $primary-colour;
+        display: grid;
+        grid-template-rows: 4rem 1fr;
+        grid-template-columns: repeat(3, minmax(1rem, 5rem));
+        column-gap: 2rem;
+        box-shadow: 0 0 0.15rem 0.15rem $primary-colour;
+
+        #contact-me {
+            padding-left: 1rem;
+            @include gridColumns(1, 4);
+        }
+
+        .contact-element {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #email, #linked-in, #git-hub {
+            @include gridRows(2, 3);
+        }
+
+        #email {
+            width: 85%;
+            @include gridColumns(1, 2);
+        }
+
+        #git-hub {
+            width: 85%;
+            @include gridColumns(2, 3);
+        }
+
+        #linked-in {
+            @include gridColumns(3, 4);
+        }
+    }
+
+    #portfolio {
+        margin: 0 auto 1rem;
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+
+        #portfolio-title {
+            margin: 0 auto;
+            background-color: $primary-colour;
+            box-shadow: 0 0 0.15rem 0.15rem $primary-colour;
+        }
+
+        .projects {
+            margin: 0.5rem 0.5rem;
+            background-color: $primary-colour;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 0.15rem 0.15rem $primary-colour;
+        }
+
+        .project-image {
+            width: 75%;
+        }
+
+        .project-text {
+            margin: 2.5vw 5vw;
+        }
+
+        .project-links {
+            width: 100%;
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+
+        a.project-link {
+            color: $project-link;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #about-me {
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+    }
+    #main-title {
+        @include gridColumns(1, 3);
+    }
+    article {
+        @include gridColumns(1, 2);
+        @include gridRows(2, 3);
+    }
+    #real-photo {
+        @include gridColumns(2, 3);
+        @include gridRows(2, 3);
+    }
+    #portfolio {
+        grid-template-columns: 1fr 1fr;
+    }
+    #portfolio-title {
+        @include gridColumns(1, 3);
+    }
+}

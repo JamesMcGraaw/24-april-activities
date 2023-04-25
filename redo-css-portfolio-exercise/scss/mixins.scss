@@ -1,0 +1,7 @@
+@mixin gridColumns($x, $y) {
+  grid-column: #{$x} / #{$y};
+}
+
+@mixin gridRows($x, $y) {
+  grid-row: #{$x} / #{$y};
+}
