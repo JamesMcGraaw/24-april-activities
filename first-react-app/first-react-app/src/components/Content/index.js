@@ -4,7 +4,7 @@ const Index = () => {
     return (
         <main>
         <p>Some stuff?</p>
-        <Button />
+        <Button text="press here" />
         </main>
     )
 }
