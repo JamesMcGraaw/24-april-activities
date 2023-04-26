@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const Button = () => {
 
@@ -7,6 +7,10 @@ const Button = () => {
        setclickCounter(clickCounter + 1)
        return console.log(clickCounter)
    }
+
+   useEffect(() => {
+       console.log('Use effect ran')
+   }, [clickCounter])
 
     return (
         <>
