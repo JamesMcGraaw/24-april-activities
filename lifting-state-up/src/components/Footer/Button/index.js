@@ -1,7 +1,8 @@
-const Button = () => {
+const Button = ({loggedIn}) => {
     return (
         <div>
-
+            Button
+            {loggedIn ? 'Welcome back!' : 'Welcome stranger!'}
         </div>
     )
 }
