@@ -7,11 +7,15 @@ import {useState} from "react";
 const App = () => {
     const [loggedIn, setLoggedIn] = useState(false)
 
+    const toggleLoggedIn = () => {
+        setLoggedIn(!loggedIn)
+    }
+
     return (
         <>
             <Header loggedIn={loggedIn} />
             <Content/>
-            <Footer loggedIn={loggedIn} />
+            <Footer loggedIn={loggedIn} toggleLoggedIn={toggleLoggedIn}/>
         </>
     );
 }

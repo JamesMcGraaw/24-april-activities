@@ -1,10 +1,9 @@
 import Button from "./Button";
 
-const Footer = ({loggedIn}) => {
+const Footer = ({loggedIn, toggleLoggedIn}) => {
     return (
         <div>
-            Footer
-            <Button loggedIn={loggedIn}/>
+            <Button loggedIn={loggedIn} toggleLoggedIn={toggleLoggedIn}/>
         </div>
     )
 }
