@@ -1,3 +1,15 @@
-button {
-    background-color: red;
+.tip {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.tip button {
+    width: 100%
+}
+
+.tip input {
+    width: 90%
 }

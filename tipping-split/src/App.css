@@ -29,6 +29,8 @@
 }
 
 main {
+  margin: 1rem;
+  background-color: #4B91F2;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }

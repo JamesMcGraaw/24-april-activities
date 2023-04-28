@@ -8,7 +8,7 @@ import {useState} from "react";
 function App() {
 
   const [billTotal, setBillTotal] = useState("")
-  const [tipPercent, setTipPercent] = useState("0")
+  const [tipPercent, setTipPercent] = useState("")
   const [numPeople, setNumPeople] = useState("")
 
   const getBillTotal = (value) => {
