@@ -1,6 +1,7 @@
 import Reset from "../Reset";
 import React from "react";
 import './styles.css';
+import AnyChanges from "../AnyChanges/AnyChanges";
 
 const Display = ({billTotal, tipPercent, numPeople, getTipPercent, getNumPeople, getBillTotal}) => {
 
@@ -20,6 +21,7 @@ const Display = ({billTotal, tipPercent, numPeople, getTipPercent, getNumPeople,
             <div className="display">
                 <p>Total owed per person: £{calculateTotalPerPerson(billFloat, tipFloat, peopleFloat)}</p>
                 <p>Which includes a £{calculateTipPerPerson(billFloat, tipFloat, peopleFloat)} tip</p>
+                <AnyChanges billTotal={billTotal} getBillTotal={getBillTotal}/>
                 <Reset getBillTotal={getBillTotal}
                        getTipPercent={getTipPercent}
                        getNumPeople={getNumPeople}/>
