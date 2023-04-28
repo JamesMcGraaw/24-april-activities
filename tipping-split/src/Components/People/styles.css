@@ -1,0 +1,11 @@
+.people {
+    justify-content: center;
+}
+
+.people div {
+    margin: 1rem auto;
+}
+
+.people input {
+    margin: 0 3rem;
+}

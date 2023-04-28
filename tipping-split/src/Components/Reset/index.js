@@ -1,3 +1,5 @@
+import './styles.css';
+
 const Reset = ({getBillTotal, getNumPeople, getTipPercent}) => {
 
     const reset = () => {

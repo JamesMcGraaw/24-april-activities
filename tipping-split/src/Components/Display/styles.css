@@ -1,6 +1,9 @@
 .display {
+    margin: 2rem;
+    background-color: aqua;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
+    font-size: 1.75rem;
 }

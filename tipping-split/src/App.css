@@ -29,14 +29,17 @@
 }
 
 main {
+  width: 95vw;
   margin: 1rem;
   background-color: #4B91F2;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .input  {
   display: grid;
+  margin: 2rem;
+  background-color: #61dafb;
   grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
@@ -48,5 +51,11 @@ main {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    grid-template-columns: 1fr 1fr;
   }
 }
